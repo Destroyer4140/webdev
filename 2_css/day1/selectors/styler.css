@@ -1,0 +1,25 @@
+/* h1{
+    background-color: pink;
+    text-align: center;
+} */
+
+/* ul{
+    background-color: aquamarine;
+} */
+/* Id based selector used to uniquly identify any element. */
+#exe{
+    background-color: lightblue;
+    text-align: left;
+}
+
+/* Class based selector used as group selector. */
+.list {
+    background-color: antiquewhite;
+}
+
+/*
+    group based selection
+*/
+h1, .diet, #exe{
+    background-color: rgba(208, 240, 128, 0.638);
+}
