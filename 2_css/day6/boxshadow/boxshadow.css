@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    /* background-color: orange;
+    box-shadow: inset 10px 5px 10px aliceblue;  */
+    /* offset-x, offset-y, blur-radius and spread-radius */
+    /* background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px orange; */
+    background-color: white;
+    overflow: scroll;
+}
