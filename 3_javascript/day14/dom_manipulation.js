@@ -22,3 +22,41 @@ newElement2.style.fontSize = "30px";
 console.log(newElement2);
 
 element.after(newElement2);
+
+
+const list = document.createElement("li");
+list.textContent = "Milk";
+const list1 = document.createElement("li");
+list1.textContent = "Cake";
+
+const list2 = document.createElement("li");
+list2.textContent = "Halwa";
+
+const list3 = document.createElement("li");
+list3.textContent = "Paneer";
+
+
+const unorderElement = document.getElementById("listing");
+// unorderElement.append(list);
+// unorderElement.append(list1);
+// // at the start
+// unorderElement.prepend(list2);
+// // after milk
+// unorderElement.children[1].after(list3);
+
+
+const arr = ["Milk", "Paneer", "Halwa", "Salad", "Tofu"];
+
+const fragment = document.createDocumentFragment("li");
+for(let food of arr) {
+    const li = document.createElement("li");
+    li.textContent = food;
+    fragment.append(li);
+    // unorderElement.append(li);
+}
+unorderElement.append(fragment);
+
+
+const h1 = document.getElementById("first");
+h1.remove();
+
