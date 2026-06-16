@@ -1,0 +1,29 @@
+1) What is Emmet?
+Ans:- Emmet is a powerful toolkit and plugin built into modern code editors (like VS Code) that allows developers to write HTML and CSS much faster. It works by turning simple, CSS-style abbreviations into full lines of code.
+
+2). Difference between a Library and Framework?
+Ans:- When you use a library, your code controls the application flow and calls the library. e.g. React, Numpy etc. Using library in an existing js code few parts as per requirement you can modify. Which is not possible in case of framework. 
+
+When you use a framework, the framework controls the architecture and calls your code at specific integration points. e.g. Angular, Springboot.
+
+3). What is CDN? Why do we use it?
+
+React CDN refers to using Content Delivery Network links to load the React library directly into an HTML file using <script> tags, rather than installing it locally via a package manager like npm or yarn. A Content Delivery Network (CDN) is a geographically distributed group of servers that caches and serves static web assets from the server closest to the user's physical location.
+
+Why?
+
+Developers choose the CDN approach for specific scenarios where full-scale framework setups are unnecessary:
+Zero Installation Required: You do not need to install Node.js, npm, or configure complex build tools like Webpack or Vite.
+Rapid Prototyping: It allows you to build quick single-page experiments or test React features instantly within a single index.html 
+file.Incremental Integration: You can easily drop React into an existing, legacy website (like a WordPress or static HTML site) to power a single widget or form without rewriting the whole application.
+Global Caching Speed: For simple sites, popular CDN providers like unpkg or jsDelivr host highly cached versions of the React library. If a user has already visited another site using the same CDN link, their browser loads it instantly from local cache.
+
+4).Why React is known as React?
+React is called React because it is designed to automatically "react" to changes in application data. The library's core philosophy is built around responsiveness, ensuring that the user interface (UI) dynamically mirrors the underlying data state without forcing developers to manually update the webpage.
+
+5). What is crossorigin in script tag?
+The crossorigin attribute in a <script> tag configures the browser's Cross-Origin Resource Sharing (CORS) request policies when fetching third-party JavaScript files. By default, browsers restrict data sharing between different domains due to the Same-Origin Policy.
+
+6). What is difference between React and ReactDOM?
+React is the core JavaScript library responsible for component logic, state management, and defining the structure of the user interface, while ReactDOM is the platform-specific companion library that takes those React components and actually renders them into the browser's Document Object Model (DOM).
+
