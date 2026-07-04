@@ -1,11 +1,9 @@
-import './App.css'
+import Body from './components/Body';
 
-function App() {
+const App = () => {
 
   return (
-    <div className='App text-3xl font-bold text-red-400'>
-      Namaste Everyone, Let's build netflix GPT.
-    </div>
+    <Body/>
   );
 }
 

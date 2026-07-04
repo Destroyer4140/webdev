@@ -3,6 +3,9 @@
 
 - Created Project using Vite.
 - Configured TailwindCSS
+- Header
+- Login Form
+- Sign Up Form
 
 # Features
 - Login/Signup
