@@ -2,10 +2,21 @@
 # Netflix App
 
 - Created Project using Vite.
-- Configured TailwindCSS
-- Header
-- Login Form
-- Sign Up Form
+- Configured TailwindCSS.
+- Header.
+- routing of App.
+- Login Form.
+- Sign Up Form.
+- Form validation.
+- useRef Hook.
+- Firebase setup.
+- Deploying our app to production.
+- create signup user account.
+- Implemented SignIn user api
+- Created Redux store with userSlice
+- Implemented Signout
+- Update Profile
+- Fetch from TMDB
 
 # Features
 - Login/Signup
