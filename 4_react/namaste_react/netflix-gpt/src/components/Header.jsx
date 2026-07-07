@@ -1,24 +1,46 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NETFLIX_LOGO, USER_ICON_LINK } from '../utils/constant'
 import { signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { addUser, removeUser } from "../utils/userSlice";
 
 const Header = () => {
 
   const navigate = useNavigate();
   const user = useSelector(store => store.user);
+  const dispatch = useDispatch();
 
   const handleSignout = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      navigate("/");
     }).catch((error) => {
       // An error happened.
       navigate("/error");
     });
   }
+
+    useEffect(() => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const {uid, email, displayName, photoURL} = user;
+        dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
+        navigate("/browse");
+      } else {
+        // User is signed out
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+
+    // unsubscribed when component unmounts.
+    return () => unsubscribed();
+  }, []);
 
   return (
       <div className='absolute w-screen px-8 py-2 bg-linear-to-b from-black z-10 flex justify-between'>

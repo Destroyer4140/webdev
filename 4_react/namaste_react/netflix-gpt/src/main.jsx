@@ -5,7 +5,7 @@ import './index.css';
 
 // This is how it should be used down below:
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

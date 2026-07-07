@@ -1,6 +1,6 @@
 import { useState, useRef } from "react"
 import Header from './Header'
-import { LOGIN_PAGE_BACKGROUND_IMG } from '../utils/constant'
+import { LOGIN_PAGE_BACKGROUND_IMG, PROFILE_PHOTO } from '../utils/constant'
 import { checkValidData } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -37,18 +37,16 @@ const Login = () => {
             // Signed up 
             const user = userCredential.user;
             updateProfile(user, {
-              displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/65092578?s=400&u=cc60b6104c3e0a1d9dde1bf8117fa3d70d5e9042&v=4"
+              displayName: name.current.value, photoURL: PROFILE_PHOTO
             }).then(() => {
               // Profile updated!
               const {uid, email, displayName, photoURL} = auth.currentUser;
               dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
-              navigate("/browse");
             }).catch((error) => {
               const errorCode = error.code;
               const errorMessage = error.message;
               setErrMessage(errorCode + "-" + errorMessage);
             });
-            console.log(user);
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -62,8 +60,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
