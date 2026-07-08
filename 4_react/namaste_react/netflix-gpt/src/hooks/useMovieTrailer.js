@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 
 const useMovieTrailer = (movieId) => {
     const dispatch = useDispatch();
-
+    
 
     const getMovieVideos = async () => {
       const data = await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos?language=en-US', API_OPTIONS);

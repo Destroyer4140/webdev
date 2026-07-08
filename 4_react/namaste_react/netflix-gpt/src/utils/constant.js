@@ -8,7 +8,7 @@ export const PROFILE_PHOTO = "https://avatars.githubusercontent.com/u/65092578?s
 
 export const API_OPTIONS = {
   method: 'GET',
-  headers: {accept: 'application/json', Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYWQxMjVlZTNjZTEwODJlMDhkOWViODgxZDdmNGQxOCIsIm5iZiI6MTc4MzM2NzY3OS4yNCwic3ViIjoiNmE0YzA3ZmZmZWRmOTg4NjIwODM3NTNjIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.7iROQijUXExpQIzyXJ5nr7fUepWuVKghaPnz-Ww3G3A'}
+  headers: {accept: 'application/json', Authorization: 'Bearer ' + import.meta.env.VITE_APP_TMDB_KEY }
 };
 
 export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w500/";
@@ -16,3 +16,5 @@ export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w500/";
 
 export const SUPPORTED_LANGUAGES = [{identofier: "en", name: "English"}, 
   {identofier: "hindi", name: "Hindi"}, {identofier: "spanish", name: "Spanish"}];
+
+export const OPENAI_KEY = import.meta.env.VITE_APP_OPENAI_KEY;
